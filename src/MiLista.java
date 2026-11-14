@@ -9,14 +9,14 @@ public class MiLista {
         return cabeza == null;
     }
 
-    // Método sencillo para insertar manteniendo el orden de urgencia y llegada
+    // insertar manteniendo el orden de urgencia y llegada
     public void insertarOrdenado(String paciente) {
         Nodo nuevo = new Nodo(paciente);
 
         int prioridadNueva = Urgencias.prioridadDe(paciente);
         int ordenNuevo = Urgencias.ordenDe(paciente);
 
-        // Si la lista está vacía o el nuevo va antes que la cabeza
+        // Si la lista no tiene nada o el nuevo va antes que la cabeza
         if (cabeza == null) {
             cabeza = nuevo;
         } else {
